@@ -1,6 +1,10 @@
 - Unix
 - Bash
 - Git
+- Phyton
+- JavaScript
+- Node.js
 - HTML
 - CSS
 - React
+
