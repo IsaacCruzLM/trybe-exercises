@@ -11,9 +11,9 @@
   }
 
   p {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 3em;
-    font-style: oblique;
+    font-style: initial;
     text-align: center;
   }
 
