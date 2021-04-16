@@ -1,0 +1,41 @@
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.super-mario{
+    position: absolute;
+    width: 200px;
+    left: 7%;
+    top: 37%;
+}
+
+.goomba{
+    position: absolute;
+    width: 100px;
+    left: 40%;
+    top: 65%;
+}
+
+.bowser{
+    position: absolute;
+    width: 400px;
+    left: 60%;
+    top: 10%;
+}
+
+.baloon{
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    top: 13%;
+    z-index: 2;
+}
+
+p{
+    position: absolute;
+    font-weight: bold;
+    left: 52.5%;
+    z-index: 3;
+}

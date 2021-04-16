@@ -1,0 +1,33 @@
+div:hover{
+    border: 1px solid red;
+}
+
+div:first-child{
+    background-color: red;
+}
+
+div:nth-child(2){
+    background-color: aqua;
+}
+
+div:nth-child(3){
+    background-color:  green;
+    padding: 3px;
+}
+
+div:nth-child(4){
+    background-color: rgb(58, 58, 15);
+}
+
+div:nth-child(5){
+    background-color: rgb(175, 109, 175);
+}
+
+h3{
+    color: wheat;
+}
+
+div:first-child h3, div:nth-child(3) h3, div:nth-child(5) h3 {
+    font-style: italic;
+    color: black;
+}
