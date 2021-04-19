@@ -27,3 +27,26 @@ nav {
   background-color: rgb(16, 76, 133);
   color: aliceblue;
 }
+
+article {
+  background-color: antiquewhite;
+}
+
+article h2 {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+article section h3 {
+  text-align: center;
+  padding: 1rem;
+}
+
+article section section h4 {
+  text-align: center;
+}
+
+article section section p {
+  text-align: center;
+  margin-bottom: 10px;
+}
