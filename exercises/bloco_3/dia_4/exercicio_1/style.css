@@ -72,7 +72,16 @@ section.infos-interessantes section img {
   height: 200px;
 }
 
+section.infos-interessantes {
+  margin-bottom: 30px;
+}
+
 /*  -------------------------------ARTIGO (TERCEIRA SEÇÃO DA MAIN) --------------------------------- */
+
+.referencias-bibliograficas ul li {
+  margin-bottom: 20px;
+  width: 90%;
+}
 
 /* -------------------------------- MENU LATERAL - SIDENAV ------------------------------------------------- */
 
