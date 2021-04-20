@@ -58,6 +58,10 @@ section.info-gerais {
   margin-bottom: 30px;
 }
 
+#nome-cientifico {
+  font-style: italic;
+}
+
 /* ------------------------------------ARTIGO (SEGUNDA SEÇÃO DA MAIN)--------------------------- */
 
 section.infos-interessantes section {
