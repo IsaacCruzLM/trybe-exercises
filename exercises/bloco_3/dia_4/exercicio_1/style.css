@@ -79,8 +79,12 @@ section.infos-interessantes {
 /*  -------------------------------ARTIGO (TERCEIRA SEÇÃO DA MAIN) --------------------------------- */
 
 .referencias-bibliograficas ul li {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: 90%;
+}
+
+.referencias-bibliograficas {
+  padding-bottom: 30px;
 }
 
 /* -------------------------------- MENU LATERAL - SIDENAV ------------------------------------------------- */
@@ -110,3 +114,16 @@ section.infos-interessantes {
 }
 
 /*  -------------------------------------------RODAPÉ--------------------------------------------------------- */
+
+footer {
+  background-color: rgb(16, 76, 133);
+  color: aliceblue;
+  padding: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: aliceblue;
+}
