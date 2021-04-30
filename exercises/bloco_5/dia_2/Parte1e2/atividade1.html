@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+
+      <script>
+
+        // parte 1
+
+        document.querySelector("#elementoOndeVoceEsta");
+
+        document.querySelector("#elementoOndeVoceEsta").parentNode.style.color = "green";
+      
+        document.querySelector("#primeiroFilhoDoFilho").innerHTML = "Eduardo Jr.";
+
+        document.querySelector("#pai").firstChild;
+
+        document.querySelector("#elementoOndeVoceEsta").previousElementSibling;
+
+        document.querySelector("#elementoOndeVoceEsta").nextSibling;
+      
+        document.querySelector("#elementoOndeVoceEsta").nextElementSibling;
+
+        document.querySelector("#pai").lastElementChild.previousElementSibling;
+
+        // parte 2
+
+          // 1
+
+        let element1 = document.querySelector("#pai");
+
+        let irmaoDoElementoOndeVoceEsta = document.createElement("p");
+
+        irmaoDoElementoOndeVoceEsta.innerText = "Irmão do Elemento Onde Você está."
+
+        element1.appendChild(irmaoDoElementoOndeVoceEsta);
+
+          // 2
+
+        let element2 = document.querySelector("#elementoOndeVoceEsta");
+
+        let filho = document.createElement("h3");
+        filho.innerText = "Filho do elemento onde você está";
+
+        element2.appendChild(filho);
+
+          // 3
+
+        let element3 = document.querySelector("#primeiroFilhoDoFilho");
+
+        let filho2 = document.createElement("a");
+        filho2.innerText = "Filho do primeiro Filho do Filho";
+
+        element3.appendChild(filho2);
+
+          // 4
+
+        let element4 = document.querySelector("#primeiroFilhoDoFilho a").parentNode.parentNode.nextElementSibling;
+
+        let filho3 = document.createElement("h5");
+        filho3.innerText = "Filho do terceiro filho";
+
+        element4.appendChild(filho3);
+
+      </script>
+</body>
+</html>

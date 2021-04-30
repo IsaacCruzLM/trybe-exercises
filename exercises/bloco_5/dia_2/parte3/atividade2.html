@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+
+      <script>
+        let filhosDoPaiList = document.querySelector("#pai").children;
+        let filhosDoPrimeiroFilhoList = document.querySelector("#primeiroFilhoDoFilho").children;
+
+        for (let index = 0; index < filhosDoPaiList.length; index += 1) {
+          if (filhosDoPaiList[index].id !== "elementoOndeVoceEsta") {
+            filhosDoPaiList[index].remove();
+          };
+        };
+
+        for (let index = 0; index < filhosDoPrimeiroFilhoList.length; index += 1) {
+          if (filhosDoPrimeiroFilhoList[index].id !== "primeiroFilhoDoFilho") {
+            filhosDoPrimeiroFilhoList[index].remove();
+          };
+        };
+
+        document.querySelector("#pai").lastChild.remove();
+        document.querySelector("#primeiroFilhoDoFilho").lastElementChild.remove();
+      </script>
+</body>
+</html>
