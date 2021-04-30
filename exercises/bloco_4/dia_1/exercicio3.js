@@ -1,6 +1,9 @@
 let a = 10;
 let b = 26;
 
-let multiplicacao = a * b;
 
-console.log(multiplicacao);
+function mult(a, b) {
+    return a * b;
+}
+
+console.log(mult(a, b));

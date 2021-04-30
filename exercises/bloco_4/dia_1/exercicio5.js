@@ -1,6 +1,9 @@
 let a = 10;
 let b = 26;
 
-let modulo = a % b;
 
-console.log(modulo);
+function mod(a, b) {
+    return a % b;
+}
+
+console.log(mod(a, b));

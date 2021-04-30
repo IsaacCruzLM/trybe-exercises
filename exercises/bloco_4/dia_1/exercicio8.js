@@ -1,11 +1,18 @@
 let a = 10;
+let result = "";
 
-if (a > 0) {
-    console.log("Valor Positivo");
+function value(a) {
+    if (a > 0) {
+        result = "Valor Positivo";
+    }
+    else if (a < 0){
+        result = "Valor Negativo";
+    }
+    else {
+        result = "Valor neutro";
+    }
+
+    return result;
 }
-else if (a < 0){
-    console.log("Valor Negativo");
-}
-else {
-    console.log("Valor neutro")
-}
+
+console.log(value(a))
