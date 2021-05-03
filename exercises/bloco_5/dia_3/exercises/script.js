@@ -15,6 +15,8 @@ function createDaysOfTheWeek() {
   
   // Escreva seu código abaixo.
 
+  // Exercicio 1
+
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 let ulDays = document.querySelector("#days");
@@ -26,15 +28,56 @@ for (let index = 0; index < dezDaysList.length; index += 1){
 
     if (dezDaysList[index] === 24 || dezDaysList[index] === 31 ) {
         element.className = "day holiday";
-    }
+    };
 
     if (dezDaysList[index] === 4 || dezDaysList[index] === 11 || dezDaysList[index] === 18) {
         element.className = "day friday";
-    }
+    };
 
     if (dezDaysList[index] === 25 ) {
         element.className = "day friday holiday";
-    }
+    };
 
     ulDays.appendChild(element);
+};
+
+// Exercicio 2
+
+function holidayButton (string) {
+    let buttonContainer = document.querySelector(".buttons-container");
+
+    let buttonHoliday = document.createElement("button");
+    buttonHoliday.innerText = string;
+    buttonHoliday.id = "btn-holiday";
+
+    buttonContainer.appendChild(buttonHoliday);
 }
+
+holidayButton("Feriados");
+
+// Ecercicio 3
+
+let buttonHoliday = document.querySelector("#btn-holiday");
+let atived = false;
+
+function showHolidays () {
+    let holidays = document.querySelectorAll(".holiday")
+
+    if (atived === false){
+        for (let index = 0; index < holidays.length; index += 1){
+            holidays[index].style.backgroundColor = "rgb(0, 128, 0)"
+            holidays[index].style.color = "white";
+        };
+
+        atived = true;
+    } else if (atived === true) {
+        for (let index = 0; index < holidays.length; index += 1){
+            holidays[index].style.backgroundColor = "rgb(238, 238, 238)";
+            holidays[index].style.color = "#777";
+        };
+
+        atived = false;
+    };
+}
+
+buttonHoliday.addEventListener("click", showHolidays);
