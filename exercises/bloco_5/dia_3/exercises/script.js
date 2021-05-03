@@ -81,3 +81,47 @@ function showHolidays () {
 }
 
 buttonHoliday.addEventListener("click", showHolidays);
+
+//Excercicio 4
+
+function fridayButton (string) {
+    let buttonContainer = document.querySelector(".buttons-container");
+
+    let buttonFriday = document.createElement("button");
+    buttonFriday.innerText = string;
+    buttonFriday.id = "btn-friday";
+
+    buttonContainer.appendChild(buttonFriday);
+}
+
+fridayButton("Sexta-Feira");
+
+//Excercicio 5
+
+
+let buttonFriday = document.querySelector("#btn-friday");
+let atived2 = false;
+let fridays = document.querySelectorAll(".friday");
+let defaultFridays = [];
+
+for (let index = 0; index < fridays.length; index += 1){
+    defaultFridays += fridays[index].innerText;
+};
+
+function showFridays () {
+   
+    if (atived2 === false){
+        for (let index = 0; index < fridays.length; index += 1){
+            fridays[index].innerText = "Sexta-Feira"
+        };
+
+        atived2 = true;
+    } else if (atived2 === true) {
+        for (let index = 0; index < fridays.length; index += 1){
+            fridays[index].innerText = defaultFridays[index];
+        };
+        atived2 = false;
+    };
+}
+
+buttonFriday.addEventListener("click", showFridays);
