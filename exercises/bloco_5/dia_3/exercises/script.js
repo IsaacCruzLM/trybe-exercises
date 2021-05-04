@@ -157,3 +157,15 @@ function createTarefas (string) {
 };
 
 createTarefas("Atividade 5.3");
+
+// Exercicio 8
+
+function createLegend (color) {
+    let element = document.createElement("div");
+    element.style.backgroundColor = color;
+    element.className = "task";
+
+    myTasks.appendChild(element);
+};
+
+createLegend("green");
