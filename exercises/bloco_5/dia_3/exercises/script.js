@@ -25,6 +25,7 @@ for (let index = 0; index < dezDaysList.length; index += 1){
     let element = document.createElement("li");
     element.innerText = dezDaysList[index];
     element.className = "day";
+    element.style.color = "rgb(119, 119, 119)";
 
     if (dezDaysList[index] === 24 || dezDaysList[index] === 31 ) {
         element.className = "day holiday";
@@ -130,12 +131,10 @@ buttonFriday.addEventListener("click", showFridays);
 
 function zoomInDay(event){
     event.target.style.fontSize = "35px";
-    event.target.style.color = "black";
 };
 
 function zoomOutDay (event){
     event.target.style.fontSize = "20px";
-    event.target.style.color = "#777";
 };
 
 let daysList = document.querySelectorAll(".day");
@@ -184,4 +183,24 @@ let tasksList = document.querySelectorAll(".task");
 
 for (let index = 0; index < tasksList.length; index += 1){
     tasksList[index].addEventListener("click", SelectTask);
+};
+
+//Exercicio 10
+
+function dayTask(event) {
+    let colorSelected = document.querySelector(".selected").style.backgroundColor;
+    let dayColor = event.target.style.color;
+    let defaultColor = "rgb(119, 119, 119)";
+
+    if (dayColor === defaultColor){
+        event.target.style.color = colorSelected;
+    } else {
+        event.target.style.color = defaultColor;
+    };
+};
+
+let daysList2 = document.querySelectorAll(".day");
+
+for (let index = 0; index < daysList.length; index += 1){
+    daysList2[index].addEventListener("click", dayTask);
 };
