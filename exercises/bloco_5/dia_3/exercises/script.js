@@ -204,3 +204,44 @@ let daysList2 = document.querySelectorAll(".day");
 for (let index = 0; index < daysList.length; index += 1){
     daysList2[index].addEventListener("click", dayTask);
 };
+
+// Bônus
+
+function adicionaCompromissos (){
+    let input = document.querySelector("#task-input");
+    if (input.value === "") {
+        alert("Entrada vazia");
+    } else {
+        let tasksList = document.querySelector(".task-list");
+
+        let element = document.createElement("li");
+        element.innerHTML = " - "+input.value;
+
+        tasksList.appendChild(element);    
+
+        input.value = "";
+    };
+};
+
+let input = document.querySelector("#task-input");
+let button = document.querySelector("#btn-add");
+
+button.addEventListener("click", adicionaCompromissos);
+
+input.addEventListener("keypress", function (e) {
+    let input = document.querySelector("#task-input");
+    if (e.key === 'Enter') {
+        if (input.value === ""){
+            alert("Entrada vazia");
+        } else {
+            let tasksList = document.querySelector(".task-list");
+        
+            let element = document.createElement("li");
+            element.innerHTML = " - "+input.value;
+        
+            tasksList.appendChild(element);    
+        
+            input.value = "";
+        };
+    };
+});

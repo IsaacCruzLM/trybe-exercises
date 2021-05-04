@@ -122,11 +122,13 @@ label {
 }
 
 .task-list {
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .task-list-container {
   display: inline-block;
+  align-items: center;
 }
 
 .task-list-container ul {
