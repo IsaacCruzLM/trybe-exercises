@@ -169,3 +169,19 @@ function createLegend (color) {
 };
 
 createLegend("green");
+
+// Exercicio 9
+
+function SelectTask (event) {
+    if (event.target.className === "task"){
+        event.target.className = "task selected";
+    } else if (event.target.className === "task selected"){
+        event.target.className = "task";
+    };
+};
+
+let tasksList = document.querySelectorAll(".task");
+
+for (let index = 0; index < tasksList.length; index += 1){
+    tasksList[index].addEventListener("click", SelectTask);
+};
