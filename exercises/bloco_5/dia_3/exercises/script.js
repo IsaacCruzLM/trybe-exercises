@@ -88,7 +88,7 @@ function fridayButton (string) {
     let buttonContainer = document.querySelector(".buttons-container");
 
     let buttonFriday = document.createElement("button");
-    buttonFriday.innerText = string;
+    buttonFriday.innerHTML = string;
     buttonFriday.id = "btn-friday";
 
     buttonContainer.appendChild(buttonFriday);
@@ -102,26 +102,58 @@ fridayButton("Sexta-Feira");
 let buttonFriday = document.querySelector("#btn-friday");
 let atived2 = false;
 let fridays = document.querySelectorAll(".friday");
-let defaultFridays = [];
 
+let defaultFridays = [];
 for (let index = 0; index < fridays.length; index += 1){
-    defaultFridays += fridays[index].innerText;
+    defaultFridays[index] = fridays[index].innerHTML;
 };
 
 function showFridays () {
    
     if (atived2 === false){
         for (let index = 0; index < fridays.length; index += 1){
-            fridays[index].innerText = "Sexta-Feira"
+            fridays[index].innerHTML = "Sexta-Feira";
         };
 
         atived2 = true;
     } else if (atived2 === true) {
         for (let index = 0; index < fridays.length; index += 1){
-            fridays[index].innerText = defaultFridays[index];
+            fridays[index].innerHTML = defaultFridays[index];
         };
         atived2 = false;
     };
 }
 
 buttonFriday.addEventListener("click", showFridays);
+
+// Exercicio 6
+
+function zoomInDay(event){
+    event.target.style.fontSize = "35px";
+    event.target.style.color = "black";
+};
+
+function zoomOutDay (event){
+    event.target.style.fontSize = "20px";
+    event.target.style.color = "#777";
+};
+
+let daysList = document.querySelectorAll(".day");
+
+for (let index = 0; index < daysList.length; index += 1){
+    daysList[index].addEventListener("mouseover", zoomInDay);
+    daysList[index].addEventListener("mouseleave", zoomOutDay);
+};
+
+// Exercicio 7
+
+let myTasks = document.querySelector(".my-tasks");
+
+function createTarefas (string) {
+    let element = document.createElement("span");
+    element.innerHTML = string;
+
+    myTasks.appendChild(element);
+};
+
+createTarefas("Atividade 5.3");
