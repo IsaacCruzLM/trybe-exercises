@@ -129,7 +129,6 @@ new JustValidate('.your-form', {
         }
       },
 });
-
 // Limpar forumlario
 
 const clearButton = document.querySelector('.clear-button');
