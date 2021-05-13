@@ -38,37 +38,112 @@ let picker = new Pikaday({
 
 // Validação dos campos
 
-new window.JustValidate('.your-form', {
-    Rules: {
-      email: {
-          required: true,
-          email: true
+new JustValidate('.your-form', {
+    rules: {
+        name: {
+            required: true,
+            minLength: 3,
+            maxLength: 40
+        },
+        email: {
+            required: true,
+            email: true,
+            maxLength: 50
+        },
+        cpf: {
+            required: true,
+            maxLength: 11
+        },
+        address: {
+            required: true,
+            maxLength: 200
+        },
+        city: {
+            required: true,
+            maxLength: 28
+        },
+        state: {
+            required: true,
+        },
+        radio: {
+            required: true,
+        },
+        text: {
+            required: true,
+            maxLength: 1000
+        },
+        position: {
+            required: true,
+            maxLength: 40
+        },
+        description: {
+            required: true,
+            maxLength: 500
+        },
+        date: {
+            required: true,
+        }
+    },
+    messages: {
+        name: {
+          required: 'O campo de nome é obrigatório.',
+          maxLength: 'O limite é de 40 caracteres.'
+        },
+        email: {
+          required: 'O campo de email é obrigatório.',
+          email: 'O email digitado não é válido.',
+          maxLength: 'O limite é de 50 caracteres.'
+        },
+        cpf: {
+          required: 'O campo de CPF é obrigatório.',
+          maxLength: 'O limite é de 11 caracteres.'
+        },
+        address: {
+          required: 'O campo endereço é obrigatório.',
+          maxLength: 'O limite é de 200 caracteres.'
+        },
+        city: {
+          required: 'O campo cidade é obrigatório.',
+          maxLength: 'O limite é de 28 caracteres.'
+        },
+        state: {
+          required: 'O campo estado é obrigatório.',
+        },
+        radio: {
+          required: 'A escolha de um item é obrigatória.',
+        },
+        text: {
+          required: 'Este campo é obrigatório.',
+          maxLength: 'O limite é de 1000 caracteres.'
+        },
+        position: {
+          required: 'Este campo é obrigatório.',
+          maxLength: 'O limite é de 40 caracteres.'
+        },
+        description: {
+          required: 'Este campo é obrigatório.',
+          maxLength: 'O limite é de 500 caracteres.'
+        },
+        date: {
+          required: 'Este campo é obrigatório.',
+        }
       },
-      checkbox: {
-          required: true
-      },
-      name: {
-          required: true,
-          minLength: 3,
-          maxLength: 15
-      },
-      text: {
-          required: true,
-          maxLength: 300,
-          minLength: 5
-      },
-      password: {
-          required: true,
-          password: true,
-          minLength: 4,
-          maxLength: 8
-      },
-      zip: {
-          required: true,
-          zip: true
-      },
-      phone: {
-          phone: true
-      }
-  }
 });
+
+// Limpar forumlario
+
+const clearButton = document.querySelector('.clear-button');
+function clearFields() {
+  const formElements = document.querySelectorAll('input');
+  for (let index = 0; index < formElements.length; index += 1) {
+    const userInput = formElements[index];
+    userInput.value = '';
+  };
+  const textAreas = document.querySelectorAll('textarea');
+  for (let index = 0; index < textAreas.length; index += 1) {
+    const usertextArea = textAreas[index];
+    usertextArea.value = '';
+  };
+}
+
+clearButton.addEventListener('click', clearFields);

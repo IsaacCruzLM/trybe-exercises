@@ -15,57 +15,58 @@
     <header class="text-center">
         <h1>Formulário para envio do currículo</h1>
     </header>
-    <form id="forms" action="" method="GET">
+    <form class="your-form" action="" method="GET">
         <div class="mb-3">
-            <label class="form-label" for="full-name">Nome Completo</label>
-            <input type="text" data-validate-field="name" name="name">
+            <label class="form-label" for="fullName">Nome Completo</label>
+            <input class="form-control" id="fullName" type="text" data-validate-field="name" name="name">
         </div>
         <div class="mb-3">
             <label class="form-label" for="inputEmail">Email</label>
-            <input class="form-control" type="email" name="email" id="inputEmail" maxlength="50" required >
+            <input class="form-control" id="inputEmail" type="email" data-validate-field="email" name="email">
         </div>
         <div class="mb-3">
             <label class="form-label" for="inputCPF">CPF</label>
-            <input class="form-control" type="text" name="CPF" id="inputCPF" maxlength="11" required>
+            <input class="form-control" type="text" data-validate-field="cpf" name="cpf" id="inputCPF">
         </div>
         <div class="mb-3">
             <label class="form-label" for="inputEndereco">Endereço</label>
-            <input class="form-control" type="text" name="endereco" id="inputEndereco" maxlength="200" required>
+            <input class="form-control" id="inputEndereco" type="text" data-validate-field="address" name="address">
         </div>
         <div class="mb-3"> 
             <label class="form-label" for="inputCity">Cidade</label>
-            <input class="form-control" type="text" name="cidade" id="inputCity" maxlength="28" required>
+            <input class="form-control" id="inputCity" type="text" data-validate-field="city" name="city">
         </div>
         <div class="mb-3">
             <label class="form-label" for="estado">Estado</label>
-            <select class="form-select" name="estado" id="inputEstado" required></select>
+            <select class="form-select" data-validate-field="state" name="state" id="inputEstado" required></select>
         </div>
         <div class="form-check">
             <label class="form-check-label" for="radioCasa">
-            <input class="form-check-input" type="radio" name="residencia" id="radioCasa" value="casa" checked>Casa</label>
+            <input class="form-check-input" data-validate-field="radio" type="radio" name="flexRadioDefault"id="radioCasa" value="casa" checked>Casa</label>
         </div>
         <div class="form-check">
             <label class="form-check-label" for="radioAptdo">
-            <input class="form-check-input" type="radio" name="residencia" id="radioAptdo" value="aptdo">Apartamento</label>
+            <input class="form-check-input" data-validate-field="radio" type="radio" name="flexRadioDefault" id="radioAptdo" value="aptdo">Apartamento</label>
         </div>
         <div class="mb-3">
             <label class="form-label" for="inpurCurResumo">Resumo do Currículo</label>
-            <textarea class="form-control" name="curResume" id="inpurCurResumo" cols="30" rows="6" maxlength="1000" required></textarea>
+            <textarea class="form-control" data-validate-field="text" name="curResume" id="inpurCurResumo" cols="30" rows="6" maxlength="1000" required></textarea>
         </div>
         <div class="mb-3">
             <label class="form-label" for="inputCargo">Cargo</label>
-            <input class="form-control" type="text" id="inputCargo" name="cargo" required maxlength="40">
+            <input data-validate-field="position" class="form-control" type="text" id="inputCargo" name="position" required maxlength="40">
         </div>
         <div class="mb-3">
             <label class="form-label" for="inpurCargoResumo">Descrição do Cargo</label>
-            <textarea class="form-control" name="cargoResume" id="inpurCargoResumo" cols="30" rows="6" maxlength="500" required></textarea>
+            <textarea data-validate-field="description" class="form-control" name="description" id="inpurCargoResumo" cols="30" rows="6" maxlength="500" required></textarea>
         </div>
         <div class="mb-3">
             <label class="form-label" for="inputDate">Data de Início</label>
-            <input class="form-control" type="text" id="datepicker" required>
+            <input data-validate-field="date" class="form-control" type="text" id="datepicker" name="date" required>
         </div>
         <div class="buttons">
             <button class="btn btn-primary" type="submit" id="enviar">Enviar Formulário</button>
+            <button type="button" class="btn btn-danger clear-button">Limpar</button>
         </div>
     </form>
 
