@@ -1,0 +1,70 @@
+body {
+  background-color: aliceblue;
+  padding: 10px;
+}
+h1 {
+  font-size: x-large;
+  text-align: center;
+}
+h2 {
+  font-size: larger;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  margin-top: 30px;
+  text-align: center;
+}
+
+figcaption {
+  font-size: medium;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: antiquewhite;
+  }
+  h1 {
+    font-size: xxx-large;
+    text-align: center;
+  }
+  h2 {
+    font-size: xx-large;
+    text-align: center;
+  }
+  p {
+    font-size: 25px;
+  }
+  .box-Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -30px;
+  }
+  img {
+    padding: 20px;
+  }
+  figcaption {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  p {
+    font-size: 35px;
+  }
+  figcaption {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+}
