@@ -53,7 +53,7 @@
   float: left;
   width: 60%;
   padding: 20px 0;
-  margin: 0 0 0 4%;
+  margin: 0 2% 0 2%;
   display: inline;
 }
 
@@ -63,7 +63,7 @@
 
 #aside {
   float: right;
-  width: 33%;
+  width: 20%;
   padding: 20px 0;
   margin: 0 3% 0 0;
   display: inline;
@@ -94,5 +94,40 @@
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 140px;
+  }
+
+  #navigation li a {
+    float: none;
+    font-size: 25px;
+  }
+
+  #globalHeader {
+    position: fixed;
+    width: 100%;
+  }
+
+  p,
+  #footer {
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  #content {
+    width: 100%;
+  }
 }
