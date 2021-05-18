@@ -179,3 +179,30 @@ footer a {
     width: 100%;
   }
 }
+
+/* -------------------- Media Query - Impressão -------------------- */
+
+@media print {
+  .sidenav,
+  header {
+    display: none;
+  }
+
+  section.infos-interessantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.infos-interessantes section {
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.infos-interessantes section img {
+    width: 40%;
+  }
+}
