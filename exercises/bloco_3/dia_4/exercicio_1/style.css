@@ -132,7 +132,7 @@ footer a {
   color: aliceblue;
 }
 
-/* -------------------- Media Query - Screen < 540px -------------------- */
+/* -------------------- Media Query - Screen < 540px Telas Pequenas -------------------- */
 
 @media screen and (max-width: 540px) {
   .sidenav {
@@ -148,6 +148,31 @@ footer a {
   section.infos-interessantes section {
     width: 80%;
     margin-top: 10px;
+  }
+
+  section.infos-interessantes section img {
+    width: 100%;
+  }
+}
+
+/* -------------------- Media Query - Screen < 950px Telas Médias -------------------- */
+
+@media screen and (max-width: 950px) {
+  .sidenav {
+    display: none;
+  }
+
+  section.infos-interessantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section.infos-interessantes section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   section.infos-interessantes section img {
