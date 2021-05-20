@@ -1,8 +1,6 @@
 let fatorialNumber = 1;
 const fatorial = (number) => {
-    let previousNumber = number - 1;
-    number > 1 ? fatorialNumber *= number : fatorial(previousNumber);
-    return fatorialNumber;
+    return (number == 1 || number == 0) ? 1 : number * fatorial(number - 1);
 }
 
 console.log(fatorial(3));
