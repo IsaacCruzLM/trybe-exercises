@@ -12,14 +12,42 @@ body {
   align-items: center;
   justify-content: space-around;
   flex: 1 1 auto;
-  min-width: 25%;
-  margin: 10px 10px;
+  width: min(90%, 400px);
+  margin: 10px auto;
   border: 1px gray solid;
   border-radius: 10px;
 }
 
 .pokedex {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 10px 10px;
+}
+
+.checkedButton {
+  background-color: brown;
+  color: yellow;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.NormalButton {
+  background-color: yellow;
+  color: red;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 600;
+}
+
+.next {
+  width: min(90%, 400px);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(5, 66, 5);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 700;
 }
