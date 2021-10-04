@@ -1,7 +1,5 @@
 use('class');
 
-db.superheroes.count({
-    "aspects.hairColor": {
-        $exists: true
-    }
+db.superheroes.deleteOne({
+    publisher: "Sony Pictures"
 });
