@@ -1,6 +1,7 @@
-db.movies.find({
-    category: "action",
-    imdbRating: {
-        $gt: 7,
+db.movies.update({
+    title: "Batman",
+}, {
+    $set: {
+        ratings: [85, 100, 102, 105]
     }
 });
