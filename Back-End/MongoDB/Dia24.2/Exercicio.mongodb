@@ -28,5 +28,19 @@ db.clientes.aggregate([
         $lte: ISODate('2020-03-31')
       }
     }
+  },
+  {
+    $group: {
+      _id: "$endereco.uf",
+      totalCompras: { $sum: 1 }
+    }
+  },
+  {
+    $sort: {
+      totalCompras: -1
+    }
+  },
+  {
+    $limit: 5
   }
-]).itcount();
+]);
