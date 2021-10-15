@@ -1,5 +1,7 @@
 use("erp");
 
+db.vendas.find();
+
 db.clientes.aggregate([
   {
     $addFields: {
@@ -14,13 +16,11 @@ db.clientes.aggregate([
     }    
   },
   {
-    $match: {
-      idade: {
-        $gte: 18, $lte: 25
-      }
+    $lookup: {
+      from: 'vendas',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'Todas_Compras'
     }
-  },
-  {
-    $count: 'totalClientes'
   }
 ]);
