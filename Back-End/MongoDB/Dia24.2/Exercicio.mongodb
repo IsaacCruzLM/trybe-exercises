@@ -1,7 +1,5 @@
 use("erp");
 
-db.vendas.find();
-
 db.clientes.aggregate([
   {
     $addFields: {
@@ -31,4 +29,4 @@ db.clientes.aggregate([
       }
     }
   }
-]);
+]).itcount();
