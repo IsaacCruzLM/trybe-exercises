@@ -15,7 +15,26 @@ const insertUser = async (req, res, next) => {
     return res.status(201).send({ message: "user Inserido com sucesso "})
 }
 
+const getUserById = async (req, res, next) => {
+    const { id } = req.params;
+
+    const user = await model.getById(id);
+
+    return res.status(200).send(user)
+}
+
+const getUsers = async (req, res, next) => {
+    const users = await model.getAll();
+
+    return res.status(200).send(users)
+}
+
+router.post('/:id', getUserById );
+
 router.post('/', insertUser );
+
+router.get('/', getUsers );
+
 
 
 module.exports = router;
